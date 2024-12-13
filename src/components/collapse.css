@@ -1,4 +1,4 @@
-.accordian-container {
+.collapse-container {
   width: 60vw;
   overflow: hidden;
   border: 1.5px solid #d9d9d9;
@@ -6,7 +6,7 @@
   padding-left: 10p;
   margin: auto;
 
-  .accordian-card {
+  .collapse-card {
     margin: 0;
 
     .heading {

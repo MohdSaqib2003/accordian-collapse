@@ -1,5 +1,5 @@
 import React from "react";
-import Accordian from "./components/Accordian";
+import Collapse from "./components/Collapse";
 
 const list = [
   {
@@ -24,15 +24,15 @@ const list = [
     key: "4",
     title: "Heading 4",
     content:
-      "Heading 4 Lorem ipsum, dolor sit amet consectetur adipisicing elit. A enim ad iusto fugit officiis illo laboriosam nihil illum laudantium! Debitis maiores cupiditate eos.",
+      "Heading 4 Lorem ipsum, dolor sit amet consectetur adipisicing elit. A enim ad iusto fugit officiis illo laboriosam nihil illum laudantium! Debitis maioresstatus cupiditate eos.",
   },
 ];
 
 const App = () => {
   return (
     <div>
-      <h1>Accordian</h1>
-      <Accordian list={list} />
+      <h1>Collapse</h1>
+      <Collapse list={list} />
     </div>
   );
 };

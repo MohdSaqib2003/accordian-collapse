@@ -1,26 +1,26 @@
 import React, { useState } from "react";
-import "./accordian.css";
+import "./collapse.css";
 
-const Accordian = ({ list }) => {
-  const [opened, setOpened] = useState(null);
+const Collapse = ({ list }) => {
+  const [opened, setOpened] = useState([]);
 
   const onExpand = (key) => {
-    if (key === opened) {
-      setOpened(null); // close if user clicks again on opened panel
+    if (opened.includes(key)) {
+      setOpened(opened.filter((k) => k !== key)); // remove from array, if user clicks on expanded panel
     } else {
-      setOpened(key);
+      setOpened([...opened, key]);
     }
   };
 
   return (
-    <div className="accordian-container">
+    <div className="collapse-container">
       {list.map((item) => {
         return (
-          <div key={item.key} className="accordian-card">
+          <div key={item.key} className="collapse-card">
             <h2 className="heading" onClick={() => onExpand(item.key)}>
               <img
                 src={
-                  opened === item.key
+                  opened.includes(item.key)
                     ? "assests/opened.png"
                     : "assests/greater.png"
                 }
@@ -29,7 +29,7 @@ const Accordian = ({ list }) => {
               />{" "}
               {item.title}
             </h2>
-            {opened === item.key ? (
+            {opened.includes(item.key) ? (
               <div className="content">{item.content}</div>
             ) : null}
           </div>
@@ -39,4 +39,4 @@ const Accordian = ({ list }) => {
   );
 };
 
-export default Accordian;
+export default Collapse;
