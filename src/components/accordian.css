@@ -1,0 +1,27 @@
+.accordian-container {
+  width: 60vw;
+  overflow: hidden;
+  border: 1.5px solid #d9d9d9;
+  border-radius: 9px;
+  padding-left: 10p;
+  margin: auto;
+
+  .accordian-card {
+    margin: 0;
+
+    .heading {
+      cursor: pointer;
+      margin: 0;
+      padding: 14px;
+      padding-left: 20px;
+      border-radius: -7px;
+      border: 1px solid #d9d9d9;
+      background-color: #f0f0f0;
+    }
+
+    .content {
+      padding: 22px;
+      font-family: sans-serif;
+    }
+  }
+}
